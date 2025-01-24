@@ -9,6 +9,8 @@
 //     document.writeln("MRU");
 // }, 1500)
 
+// const { reject } = require("async");
+
 // //! Promise
 
 // let p1 = new Promise((resolve,  reject)=>{});
@@ -29,32 +31,57 @@
 // });
 // console.log(p3);
 
-function fetchusers()
-{
-    let x = fetch("https://jsonplaceholder.typicode.com/users");
+// function fetchusers()
+// {
+//     let x = fetch("https://jsonplaceholder.typicode.com/users");
     //console.log(x);
-    x
-    .then((response)=>{
+    // x
+    // .then((response)=>{
         //console.log(response)
         //console.log(response.json());
-        return response.json().then(data=>{
-            console.log(data);
-            let store = document.getElementById("store");
+        // return response.json().then(data=>{
+        //     console.log(data);
+        //     let store = document.getElementById("store");
             //console.log(store);
-            data.map((user)=>{
+            // data.map((user)=>{
                 //console.log(user);
-                store.innerHTML += `
-                <tr>
-                <td>${user.id}</td>
-                <td>${user.name}</td>
-                <td>${user.Email}</td>
-                <td>${user.company.name}</td>
-                </tr>
-                `
-            })
-        })
-    })
-    .catch(arr=>console.log(arr))
+        //         store.innerHTML += `
+        //         <tr>
+        //         <td>${user.id}</td>
+        //         <td>${user.name}</td>
+        //         <td>${user.Email}</td>
+        //         <td>${user.company.name}</td>
+        //         </tr>
+        //         `
+        //     })
+        // })
+//     })
+//     .catch(arr=>console.log(arr))
 
-}
-fetchusers()
+// }
+// fetchusers()
+
+// let p = new Promise((resolve , reject)=>{
+//     setTimeout(() => {
+//         resolve("Promise successfully completed");
+        
+//     } , 3000);
+// })
+
+// async function demo()
+// {
+//     console.log("Start");
+//     let x =await p;
+//     console.log(x);
+//     console.log("End");
+// }
+// demo();
+
+// async function fetchusers(){
+//     let response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let data = await response.json();
+//     console.log(data);
+// }
+// fetchusers();
+
+console.log(window)
