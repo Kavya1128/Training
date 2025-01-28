@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
+}
+body{
+    font-family: sans-serif;
+}
+#navBlock > article {
+    width: 90%;
+    height: inherit;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+.topnacBlock{
+    flex-basis: 20%;
+}
